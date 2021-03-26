@@ -1,0 +1,18 @@
+.about{
+  max-width: 960px;
+  margin: 90px auto;
+}
+.about h2:nth-child(4){
+  text-indent: 30px;
+}
+.faheart{
+  color: rgb(187, 41, 65);
+}
+@media screen and (max-width:620px){
+  .about{
+    padding: 20px;
+  }
+  .about h2,.about h4{
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.content-con{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.content-con:first-child, .content-con:last-child{
+    padding: 3rem 0;
+}
+.content-l img , .content-r img{
+    width: 100%;
+    border-radius: 10px;
+}
+.content-r{
+    padding-left: 2rem;
+    text-align: left;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 620px){
+    .content-con{
+        flex-direction: column;
+    }
+    .content-con:nth-child(2) .content-r{
+        order: 1;
+    }
+    .content-con:nth-child(1) .content-r,.content-con:nth-child(3) .content-r,.content-r{
+        padding: 0 1rem ;
+        text-align: left ;
+    }
+}

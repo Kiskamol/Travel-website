@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import BlogBkk from './BlogBkk'
+import Homepage from "./Homepage";
+import { Switch, Route } from "react-router-dom";
+import BlogBkk from "./BlogBkk";
+import BlogCm from "./BlogCm";
+import BlogPk from "./BlogPk";
+import Subscribe from "./Subscribe";
+import Aboutpage from "./Aboutpage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route path="/Bangkok">
+          <BlogBkk />
+        </Route>
+        <Route path="/Chaing mai">
+          <BlogCm />
+        </Route>
+        <Route path="/Phuket">
+          <BlogPk />
+        </Route>
+        <Route path="/Subscribe">
+          <Subscribe />
+        </Route>
+        <Route path="/About">
+          <Aboutpage />
+        </Route>
+      </Switch>
+    </>
   );
-}
+};
 
 export default App;

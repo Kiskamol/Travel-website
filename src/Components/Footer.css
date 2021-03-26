@@ -1,0 +1,30 @@
+.footer{
+    background: rgba(255, 241, 111, 0.356);
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.logo-contact{
+    display: flex;
+}
+.icon {
+    margin: 10px;
+    font-size: 25px;
+}
+.icon:hover {
+    color: rgb(112, 101, 0);
+}
+@media screen and (max-width:620px) {
+    .footer p {
+        font-size: 13px;
+    }
+    .icon{
+        font-size: 20px; 
+    }
+    .footer{
+        flex-direction: column;
+    }
+}
